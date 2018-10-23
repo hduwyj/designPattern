@@ -39,7 +39,7 @@ func NewIdentity(name string, idCard string, opts ...IdentityOption) *identity {
 	return &identity{name, idCard, id.Age, id.Email}
 }
 func main() {
-	x := NewIdentity("WANGYUJIANG", "340", WithAge(20), WithEmail("sd"))
+	x := NewIdentity("WANG", "340", WithAge(20), WithEmail("hdu@hdu.edu.cn"))
 	fmt.Println(x)
 
 }
