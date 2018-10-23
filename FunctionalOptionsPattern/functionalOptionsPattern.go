@@ -29,7 +29,7 @@ func WithEmail(email string) IdentityOption {
 	}
 }
 
-var defaultIdentity = IdentityOptions{18, "hdu_wangyujiang@163.com"}
+var defaultIdentity = IdentityOptions{18, "hdu@hdu.edu.cn"}
 
 func NewIdentity(name string, idCard string, opts ...IdentityOption) *identity {
 	id := defaultIdentity
@@ -38,8 +38,9 @@ func NewIdentity(name string, idCard string, opts ...IdentityOption) *identity {
 	}
 	return &identity{name, idCard, id.Age, id.Email}
 }
+
 func main() {
-	x := NewIdentity("WANG", "340", WithAge(20), WithEmail("hdu@hdu.edu.cn"))
+	x := NewIdentity("WANG", "340", WithAge(20), WithEmail("hdu1@hdu.edu.cn"))
 	fmt.Println(x)
 
 }
